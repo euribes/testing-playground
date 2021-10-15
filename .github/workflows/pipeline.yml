@@ -15,15 +15,11 @@ jobs:
         with:
           repository: euribes/ui_automation_framework
           path: ui_automation_framework
-      - uses: actions/setup-node@v2
+      - uses: cypress-io/github-action@v2
         with:
-          node-version: '14'
-      - run: npm install
-        working-directory: ./ui_automation_framework
-      - run: sudo echo nameserver 8.8.8.8 > /etc/resolv.conf
-      - name: Run UI Tests
-        run: npx cypress run
-        working-directory: ./ui_automation_framework
+          browser: chrome
+          headless: true
+          working-directory: ./ui_automation_framework
 
   apitest:
     runs-on: ubuntu-latest
@@ -33,12 +29,8 @@ jobs:
         with:
           repository: euribes/api_automation_framework
           path: api_automation_framework
-      - uses: actions/setup-node@v2
+      - uses: cypress-io/github-action@v2
         with:
-          node-version: '14'
-      - run: npm install
-        working-directory: ./api_automation_framework
-      - run: sudo echo nameserver 8.8.8.8 > /etc/resolv.conf
-      - name: Run UI Tests
-        run: npx cypress run
-        working-directory: ./api_automation_framework
+          browser: chrome
+          headless: true
+          working-directory: ./api_automation_framework
