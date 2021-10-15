@@ -20,7 +20,7 @@ jobs:
           node-version: '14'
       - run: npm install
         working-directory: ./ui_automation_framework
-      - run: echo nameserver 8.8.8.8 > /etc/resolv.conf
+      - run: sudo echo nameserver 8.8.8.8 > /etc/resolv.conf
       - name: Run UI Tests
         run: npx cypress run
         working-directory: ./ui_automation_framework
@@ -38,7 +38,7 @@ jobs:
           node-version: '14'
       - run: npm install
         working-directory: ./api_automation_framework
-      - run: echo nameserver 8.8.8.8 > /etc/resolv.conf
+      - run: sudo echo nameserver 8.8.8.8 > /etc/resolv.conf
       - name: Run UI Tests
         run: npx cypress run
         working-directory: ./api_automation_framework
