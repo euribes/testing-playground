@@ -21,6 +21,7 @@ jobs:
           browser: chrome
           headless: true
           working-directory: ./ui_automation_framework
+          wait-on: 'http://100.25.33.224:8000'
 
   apitest:
     runs-on: ubuntu-latest
@@ -35,3 +36,4 @@ jobs:
           browser: chrome
           headless: true
           working-directory: ./api_automation_framework
+          wait-on: 'http://100.25.33.224:8000'
