@@ -15,12 +15,13 @@ jobs:
         with:
           repository: euribes/ui_automation_framework
           path: ui_automation_framework
-      - name: Install Dependencies
-        run: npm install
-        working-directory: ./api_automation_framework
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
+
       - name: Run UI Tests
         run: npx cypress run
-        working-directory: ./ui_automation_framework
 
   apitests:
     runs-on: ubuntu-latest
