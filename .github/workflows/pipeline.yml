@@ -19,9 +19,11 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
+        working-directory: ./ui_automation_framework
 
       - name: Run UI Tests
         run: npx cypress run
+        working-directory: ./ui_automation_framework
 
   apitest:
     runs-on: ubuntu-latest
@@ -35,6 +37,7 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
-
+        working-directory: ./api_automation_framework
       - name: Run UI Tests
         run: npx cypress run
+        working-directory: ./api_automation_framework
