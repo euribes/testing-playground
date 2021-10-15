@@ -9,7 +9,7 @@ on:
 
 jobs:
   uitests:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
@@ -24,7 +24,7 @@ jobs:
           wait-on-timeout: 5000
 
   apitest:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
