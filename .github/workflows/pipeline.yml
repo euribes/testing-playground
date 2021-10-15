@@ -18,7 +18,6 @@ jobs:
           path: ui_automation_framework
       - uses: cypress-io/github-action@v2
         with:
-          browser: chrome
           headless: true
           working-directory: ./ui_automation_framework
           wait-on: 'http://100.25.33.224:8000'
@@ -33,7 +32,6 @@ jobs:
           path: api_automation_framework
       - uses: cypress-io/github-action@v2
         with:
-          browser: chrome
           headless: true
           working-directory: ./api_automation_framework
           wait-on: 'http://100.25.33.224:8000'
